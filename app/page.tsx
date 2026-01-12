@@ -17,7 +17,6 @@ import {
   HeadphonesIcon,
   Monitor
 } from 'lucide-react'
-import Link from 'next/link'
 
 // Clarm Logo Component
 const ClarmLogo = ({ className = "w-6 h-6" }: { className?: string }) => (
@@ -38,21 +37,21 @@ export default function HomePage() {
               <span className="text-xl font-bold">Clarm <span className="font-medium text-[var(--finance-muted)]">for Finance</span></span>
             </div>
             <div className="hidden md:flex items-center gap-8">
-              <Link href="#use-cases" className="finance-body-sm hover:text-[var(--finance-primary)] transition-colors">
+              <a href="#use-cases" className="finance-body-sm hover:text-[var(--finance-primary)] transition-colors">
                 Use Cases
-              </Link>
-              <Link href="#features" className="finance-body-sm hover:text-[var(--finance-primary)] transition-colors">
+              </a>
+              <a href="#features" className="finance-body-sm hover:text-[var(--finance-primary)] transition-colors">
                 Features
-              </Link>
-              <Link href="#security" className="finance-body-sm hover:text-[var(--finance-primary)] transition-colors">
+              </a>
+              <a href="#security" className="finance-body-sm hover:text-[var(--finance-primary)] transition-colors">
                 Security
-              </Link>
-              <Link 
+              </a>
+              <a 
                 href="https://cal.com/stormm" 
                 className="finance-btn-primary !py-2 !px-4"
               >
                 Get Demo
-              </Link>
+              </a>
             </div>
           </div>
         </div>
@@ -63,7 +62,7 @@ export default function HomePage() {
         <div className="finance-container relative z-10">
           <div className="max-w-4xl mx-auto text-center">
             <div className="flex flex-col items-center gap-4 mb-8 animate-fade-in-up">
-              <Link 
+              <a 
                 href="https://www.ycombinator.com/companies/clarm" 
                 target="_blank"
                 rel="noopener noreferrer"
@@ -77,7 +76,7 @@ export default function HomePage() {
                   <div className="text-sm font-semibold text-[#FF6600]">Backed by Y Combinator</div>
                   <div className="text-xs text-[var(--finance-muted)]">X25 Batch · Top 0.5% of startups globally</div>
                 </div>
-              </Link>
+              </a>
               <p className="text-xs text-[var(--finance-light)] max-w-md">
                 Y Combinator is Silicon Valley&apos;s most prestigious startup accelerator, having backed Stripe, Airbnb, Coinbase, and 4,000+ companies worth over $600B.
               </p>
@@ -94,13 +93,13 @@ export default function HomePage() {
             </p>
             
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4 animate-fade-in-up animation-delay-300">
-              <Link href="https://cal.com/stormm" className="finance-btn-primary">
+              <a href="https://cal.com/stormm" className="finance-btn-primary">
                 Schedule Demo
                 <ArrowRight className="w-4 h-4" />
-              </Link>
-              <Link href="#use-cases" className="finance-btn-secondary">
+              </a>
+              <a href="#use-cases" className="finance-btn-secondary">
                 See Use Cases
-              </Link>
+              </a>
             </div>
 
             {/* Stats */}
@@ -154,8 +153,8 @@ export default function HomePage() {
               }
             ].map((item, index) => (
               <div key={index} className="finance-card">
-                <div className="w-12 h-12 rounded-full bg-red-500/10 flex items-center justify-center mb-4">
-                  <item.icon className="w-6 h-6 text-red-400" />
+                <div className="w-12 h-12 rounded-full bg-[#FF6600]/10 flex items-center justify-center mb-4">
+                  <item.icon className="w-6 h-6 text-[#FF6600]" />
                 </div>
                 <h3 className="finance-h3 mb-2">{item.title}</h3>
                 <p className="finance-body-md">{item.description}</p>
@@ -366,19 +365,19 @@ export default function HomePage() {
                 and document workflows in a 30-minute demo.
               </p>
               <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-                <Link 
+                <a 
                   href="https://cal.com/stormm" 
                   className="inline-flex items-center gap-2 px-8 py-4 font-semibold rounded-lg transition-colors bg-black text-white hover:bg-neutral-800"
                 >
                   Schedule a Demo
                   <ArrowRight className="w-4 h-4" />
-                </Link>
-                <Link 
+                </a>
+                <a 
                   href="mailto:marcus@clarm.com" 
                   className="inline-flex items-center gap-2 px-8 py-4 font-semibold rounded-lg transition-colors bg-neutral-100 text-black hover:bg-neutral-200"
                 >
                   Email our CEO
-                </Link>
+                </a>
               </div>
             </div>
           </div>
@@ -394,15 +393,15 @@ export default function HomePage() {
               <span className="text-xl font-bold">Clarm <span className="font-medium text-[var(--finance-muted)]">for Finance</span></span>
             </div>
             <div className="flex items-center gap-8">
-              <Link href="https://clarm.com/privacy" className="finance-body-sm hover:text-[var(--finance-primary)]">
+              <a href="https://clarm.com/privacy" className="finance-body-sm hover:text-[var(--finance-primary)]">
                 Privacy
-              </Link>
-              <Link href="https://clarm.com/tos" className="finance-body-sm hover:text-[var(--finance-primary)]">
+              </a>
+              <a href="https://clarm.com/tos" className="finance-body-sm hover:text-[var(--finance-primary)]">
                 Terms
-              </Link>
-              <Link href="mailto:hello@clarm.com" className="finance-body-sm hover:text-[var(--finance-primary)]">
+              </a>
+              <a href="mailto:hello@clarm.com" className="finance-body-sm hover:text-[var(--finance-primary)]">
                 Contact
-              </Link>
+              </a>
             </div>
             <div className="finance-body-sm">
               © 2026 Dialin AI Inc. d/b/a Clarm

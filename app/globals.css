@@ -19,9 +19,9 @@
   --finance-muted: #999999;
   --finance-light: #666666;
   
-  /* Classic bank red - HSBC/UBS inspired */
-  --finance-accent: #DB0011;
-  --finance-accent-hover: #B8000E;
+  /* YC Orange */
+  --finance-accent: #FF6600;
+  --finance-accent-hover: #E55A00;
   
   /* Deep navy for secondary accent */
   --finance-navy: #0A1628;
