@@ -462,7 +462,7 @@ export default function HomePage() {
 
           <div className="grid md:grid-cols-2 gap-6">
             {roiCards.map((card) => (
-              <div key={card.title} className="finance-card">
+              <div key={card.title} className="finance-card finance-card-accent">
                 <div className="finance-icon-container mb-4">
                   <card.icon className="w-5 h-5 text-white" />
                 </div>
