@@ -207,6 +207,42 @@
   color: var(--finance-muted);
 }
 
+.finance-badge-accent {
+  border-color: rgba(255, 102, 0, 0.4);
+  color: rgba(255, 255, 255, 0.9);
+  box-shadow: 0 0 0 1px rgba(255, 102, 0, 0.1) inset;
+}
+
+.finance-yc-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 8px 14px;
+  border-radius: 999px;
+  border: 1px solid rgba(255, 102, 0, 0.35);
+  background: rgba(255, 102, 0, 0.08);
+  text-decoration: none;
+  transition: transform 0.2s ease, border-color 0.2s ease;
+}
+
+.finance-yc-badge:hover {
+  transform: translateY(-1px);
+  border-color: rgba(255, 102, 0, 0.6);
+}
+
+.finance-yc-mark {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: var(--finance-accent);
+  color: #000000;
+  font-weight: 700;
+  font-size: 0.75rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
 /* Pills */
 .finance-pill-group {
   display: flex;
@@ -396,6 +432,16 @@
   height: 60%;
   background: radial-gradient(circle, rgba(255, 255, 255, 0.18), transparent 60%);
   transform: translateX(-50%);
+  pointer-events: none;
+}
+
+.finance-hero-glow-accent {
+  position: absolute;
+  bottom: -20%;
+  left: 20%;
+  width: 45%;
+  height: 55%;
+  background: radial-gradient(circle, rgba(255, 102, 0, 0.25), transparent 60%);
   pointer-events: none;
 }
 

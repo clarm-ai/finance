@@ -209,10 +209,22 @@ export default function HomePage() {
       <section className="pt-32 pb-20 md:pt-40 md:pb-32 finance-grid-bg relative overflow-hidden">
         <div className="finance-hero-grid" aria-hidden="true" />
         <div className="finance-hero-glow animate-glow" aria-hidden="true" />
+        <div className="finance-hero-glow-accent animate-glow" aria-hidden="true" />
         <div className="finance-container relative z-10">
           <div className="max-w-4xl mx-auto text-center">
             <div className="flex flex-col items-center gap-4 mb-8 animate-fade-in-up">
-              <div className="finance-badge animate-pulse-soft">New product launch</div>
+              <div className="flex flex-col items-center gap-3">
+                <div className="finance-badge finance-badge-accent animate-pulse-soft">New product launch</div>
+                <a
+                  href="https://www.ycombinator.com/companies/clarm"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="finance-yc-badge"
+                >
+                  <span className="finance-yc-mark">YC</span>
+                  <span className="finance-body-sm">Backed by Y Combinator</span>
+                </a>
+              </div>
               <div className="finance-pill-group justify-start">
                 <span className="finance-pill">Revenue Desk for Finance</span>
                 <span className="finance-pill">Your inbound, working around the clock</span>
