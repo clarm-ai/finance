@@ -170,11 +170,12 @@
   border: 1px solid var(--finance-border);
   border-radius: 12px;
   padding: 24px;
-  transition: all 0.2s ease;
+  transition: transform 0.2s ease, border-color 0.2s ease;
 }
 
 .finance-card:hover {
   border-color: var(--finance-border-hover);
+  transform: translateY(-2px);
 }
 
 .finance-card-elevated {
@@ -182,6 +183,12 @@
   border: 1px solid var(--finance-border);
   border-radius: 16px;
   padding: 32px;
+  transition: transform 0.2s ease, border-color 0.2s ease;
+}
+
+.finance-card-elevated:hover {
+  border-color: var(--finance-border-hover);
+  transform: translateY(-2px);
 }
 
 /* Badge - Minimal */
@@ -195,6 +202,25 @@
   text-transform: uppercase;
   letter-spacing: 0.05em;
   border-radius: 6px;
+  background: var(--finance-bg-card);
+  border: 1px solid var(--finance-border);
+  color: var(--finance-muted);
+}
+
+/* Pills */
+.finance-pill-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+}
+
+.finance-pill {
+  display: inline-flex;
+  align-items: center;
+  padding: 6px 12px;
+  font-size: 0.8125rem;
+  border-radius: 999px;
   background: var(--finance-bg-card);
   border: 1px solid var(--finance-border);
   color: var(--finance-muted);
@@ -236,6 +262,64 @@
   letter-spacing: 0.05em;
 }
 
+/* Funnel steps */
+.finance-step {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 20px;
+  background: var(--finance-bg-card);
+  border: 1px solid var(--finance-border);
+  border-radius: 16px;
+  padding: 24px;
+  transition: transform 0.2s ease, border-color 0.2s ease;
+}
+
+.finance-step:hover {
+  border-color: var(--finance-border-hover);
+  transform: translateY(-2px);
+}
+
+.finance-step-icon {
+  width: 44px;
+  height: 44px;
+  border-radius: 12px;
+  background: var(--finance-bg-subtle);
+  border: 1px solid var(--finance-border);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.finance-step-kicker {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--finance-light);
+  margin-bottom: 6px;
+}
+
+.finance-step-metrics {
+  display: grid;
+  gap: 8px;
+}
+
+.finance-step-metric {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+/* Callout */
+.finance-callout {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 20px 24px;
+  border-radius: 16px;
+  border: 1px solid var(--finance-border);
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.08), rgba(255, 255, 255, 0.02));
+}
+
 /* Animations */
 @keyframes fadeInUp {
   from {
@@ -257,10 +341,62 @@
 .animation-delay-300 { animation-delay: 0.3s; }
 .animation-delay-400 { animation-delay: 0.4s; }
 
+@keyframes floatSlow {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-6px); }
+}
+
+@keyframes pulseSoft {
+  0%, 100% { opacity: 0.75; }
+  50% { opacity: 1; }
+}
+
+@keyframes glowPulse {
+  0%, 100% { opacity: 0.35; transform: translateX(-50%) scale(1); }
+  50% { opacity: 0.55; transform: translateX(-50%) scale(1.04); }
+}
+
+.animate-float-slow {
+  animation: floatSlow 6s ease-in-out infinite;
+}
+
+.animate-pulse-soft {
+  animation: pulseSoft 4s ease-in-out infinite;
+}
+
+.animate-glow {
+  animation: glowPulse 12s ease-in-out infinite;
+}
+
 /* Clean background */
 .finance-grid-bg {
   position: relative;
   background: var(--finance-bg);
+  background-image:
+    radial-gradient(circle at 20% 20%, rgba(255, 255, 255, 0.08), transparent 45%),
+    radial-gradient(circle at 80% 30%, rgba(255, 255, 255, 0.05), transparent 50%);
+}
+
+.finance-hero-grid {
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(rgba(255, 255, 255, 0.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.04) 1px, transparent 1px);
+  background-size: 80px 80px;
+  opacity: 0.12;
+  pointer-events: none;
+}
+
+.finance-hero-glow {
+  position: absolute;
+  top: -15%;
+  left: 50%;
+  width: 70%;
+  height: 60%;
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.18), transparent 60%);
+  transform: translateX(-50%);
+  pointer-events: none;
 }
 
 /* Navigation styles for dark theme */
@@ -268,6 +404,15 @@ nav {
   background: rgba(0, 0, 0, 0.9) !important;
   backdrop-filter: blur(12px);
   border-bottom: 1px solid var(--finance-border) !important;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .animate-fade-in-up,
+  .animate-float-slow,
+  .animate-pulse-soft,
+  .animate-glow {
+    animation: none !important;
+  }
 }
 
 /* Responsive utilities */

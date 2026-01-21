@@ -2,8 +2,9 @@ import type { Metadata } from 'next'
 import './globals.css'
 
 export const metadata: Metadata = {
-  title: 'Clarm for Finance | AI Agents for Financial Services',
-  description: 'Deep research agents for customer service, knowledge search, and document intelligence. Built by ex-Deutsche Bank AI leaders. Y Combinator X25.',
+  title: 'Clarm Revenue Desk for Finance | Turn inbound to revenue',
+  description:
+    'Revenue Desk captures inbound intent across chat and email, responds instantly, qualifies revenue conversations, and routes high-value opportunities to humans 24/7 without adding headcount.',
 }
 
 export default function RootLayout({
