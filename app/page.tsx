@@ -213,18 +213,26 @@ export default function HomePage() {
         <div className="finance-container relative z-10">
           <div className="max-w-4xl mx-auto text-center">
             <div className="flex flex-col items-center gap-4 mb-8 animate-fade-in-up">
-              <div className="flex flex-col items-center gap-3">
-                <div className="finance-badge finance-badge-accent animate-pulse-soft">New product launch</div>
-                <a
-                  href="https://www.ycombinator.com/companies/clarm"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="finance-yc-badge"
-                >
-                  <span className="finance-yc-mark">YC</span>
-                  <span className="finance-body-sm">Backed by Y Combinator</span>
-                </a>
-              </div>
+              <div className="finance-badge finance-badge-accent animate-pulse-soft">New product launch</div>
+              <a
+                href="https://www.ycombinator.com/companies/clarm"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center gap-3 px-4 py-2 rounded-lg bg-[#FF6600]/10 border border-[#FF6600]/20 hover:bg-[#FF6600]/20 transition-colors"
+              >
+                <svg className="w-6 h-6" viewBox="0 0 24 24" fill="#FF6600">
+                  <path d="M0 0h24v24H0z" fill="none" />
+                  <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5" />
+                </svg>
+                <div className="text-left">
+                  <div className="text-sm font-semibold text-[#FF6600]">Backed by Y Combinator</div>
+                  <div className="text-xs text-[var(--finance-muted)]">X25 Batch · Top 0.5% of startups globally</div>
+                </div>
+              </a>
+              <p className="text-xs text-[var(--finance-light)] max-w-md">
+                Y Combinator is Silicon Valley&apos;s most prestigious startup accelerator, having backed Stripe,
+                Airbnb, Coinbase, and 4,000+ companies worth over $600B.
+              </p>
               <div className="finance-pill-group justify-start">
                 <span className="finance-pill">Revenue Desk for Finance</span>
                 <span className="finance-pill">Your inbound, working around the clock</span>
@@ -262,22 +270,29 @@ export default function HomePage() {
             </div>
 
             {/* Stats */}
-            <div className="grid grid-cols-2 lg:grid-cols-4 gap-8 mt-16 pt-16 border-t border-[var(--finance-border)] animate-fade-in-up animation-delay-400">
-              <div className="finance-stat">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mt-16 pt-16 border-t border-[var(--finance-border)] animate-fade-in-up animation-delay-400">
+              <div className="finance-stat-card finance-stat-card-accent">
+                <div className="finance-stat-kicker">Inbound revenue uplift</div>
                 <div className="finance-stat-value">20-50%</div>
-                <div className="finance-stat-label">Inbound Revenue Uplift</div>
+                <div className="finance-stat-subcopy">Instant response + recovered intent</div>
               </div>
-              <div className="finance-stat">
+              <div className="finance-stat-card finance-stat-card-outline">
+                <div className="finance-stat-kicker">More conversations captured</div>
                 <div className="finance-stat-value">30-50%</div>
-                <div className="finance-stat-label">More Conversations Captured</div>
+                <div className="finance-stat-meter">
+                  <span />
+                </div>
               </div>
-              <div className="finance-stat">
+              <div className="finance-stat-card finance-stat-card-line">
+                <div className="finance-stat-kicker">Reactive work automated</div>
                 <div className="finance-stat-value">40-60%</div>
-                <div className="finance-stat-label">Reactive Work Automated</div>
+                <div className="finance-stat-chip">Automation layer</div>
               </div>
-              <div className="finance-stat">
-                <div className="finance-stat-value">60%</div>
-                <div className="finance-stat-label">Inbound After Hours</div>
+              <div className="finance-stat-card finance-stat-card-compact">
+                <div className="finance-stat-ring">
+                  <span>60%</span>
+                </div>
+                <div className="finance-stat-kicker">Inbound after hours</div>
               </div>
             </div>
           </div>
@@ -353,7 +368,8 @@ export default function HomePage() {
                 {[
                   'Capture more intent from the traffic you already have',
                   'Respond instantly, every time, without queues',
-                  'Qualify revenue intent in real time and route only high-value conversations'
+                  'Qualify revenue intent in real time and route only high-value conversations',
+                  'Set up in 1 minute (backend entirely automated and self-learning)'
                 ].map((item) => (
                   <div key={item} className="flex items-center gap-3">
                     <Check className="w-4 h-4 text-white" />
@@ -375,6 +391,35 @@ export default function HomePage() {
             <p className="finance-body-lg">
               Revenue Desk makes the inbound funnel explicit. It captures demand that already exists, responds instantly,
               and prioritizes only revenue-bearing conversations.
+            </p>
+          </div>
+
+          <div className="finance-funnel-math mb-12">
+            <div className="finance-funnel-equation">
+              <div className="finance-equation-chip">Current inbound</div>
+              <div className="finance-equation-row">
+                <span className="finance-equation-value">100%</span>
+                <span className="finance-equation-operator">-</span>
+                <span className="finance-equation-label">Friction barrier</span>
+                <span className="finance-equation-operator">=</span>
+                <span className="finance-equation-value">5-10%</span>
+              </div>
+              <div className="finance-equation-caption">Email-only capture</div>
+            </div>
+            <div className="finance-funnel-equation finance-funnel-equation-accent">
+              <div className="finance-equation-chip">Revenue Desk</div>
+              <div className="finance-equation-row">
+                <span className="finance-equation-value">100%</span>
+                <span className="finance-equation-operator">-</span>
+                <span className="finance-equation-label">Friction lowered</span>
+                <span className="finance-equation-operator">=</span>
+                <span className="finance-equation-value">30-50%</span>
+              </div>
+              <div className="finance-equation-caption">Chat + instant response capture</div>
+            </div>
+            <p className="finance-body-sm">
+              Revenue Desk lowers the barrier at the moment of decision so intent that would be lost re-enters the
+              funnel.
             </p>
           </div>
 
