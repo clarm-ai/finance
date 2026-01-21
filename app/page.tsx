@@ -528,7 +528,7 @@ export default function HomePage() {
                   <ArrowRight className="w-4 h-4" />
                 </a>
                 <a
-                  href="mailto:hello@clarm.com"
+                  href="mailto:marcus@clarm.com"
                   className="inline-flex items-center gap-2 px-8 py-4 font-semibold rounded-lg transition-colors bg-neutral-100 text-black hover:bg-neutral-200"
                 >
                   Contact sales
@@ -556,7 +556,7 @@ export default function HomePage() {
               <a href="https://clarm.com/tos" className="finance-body-sm hover:text-[var(--finance-primary)]">
                 Terms
               </a>
-              <a href="mailto:hello@clarm.com" className="finance-body-sm hover:text-[var(--finance-primary)]">
+              <a href="mailto:marcus@clarm.com" className="finance-body-sm hover:text-[var(--finance-primary)]">
                 Contact
               </a>
             </div>
